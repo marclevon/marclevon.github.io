@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marc Levon | Official Site</title>
-    <!-- FontAwesome Library for crisp social icons -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>Mumkai | The Works of Marc Mumcian</title>
     <style>
         :root {
             --bg-color: #050505;
             --card-bg: #110303;
-            --accent-color: #990000; /* Rich Dark Red */
+            --accent-color: #990000; /* Rich Deep Dark Red Theme */
             --accent-hover: #cc0000;
             --text-main: #ffffff;
-            --text-muted: #888888;
+            --text-muted: #aaaaaa;
+            --border-color: #240707;
         }
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -24,84 +23,101 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-        /* Header Section */
+        /* Top Navigation Header Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-main);
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        /* Hero Banner Title Info */
         header {
             text-align: center;
-            padding: 60px 0 30px 0;
+            padding: 60px 0 40px 0;
         }
         .profile-img {
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--accent-color);
             box-shadow: 0 0 20px rgba(153, 0, 0, 0.3);
             margin-bottom: 20px;
         }
-        h1 {
-            font-size: 2.8rem;
-            margin: 10px 0;
+        header h1 {
+            font-size: 3rem;
+            margin: 10px 0 5px 0;
             letter-spacing: 3px;
             text-transform: uppercase;
         }
-        .subtitle {
+        header p {
             color: var(--accent-color);
-            font-size: 1.1rem;
-            letter-spacing: 2px;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-top: 0;
+            margin-bottom: 30px;
         }
-        .bio {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-        }
-        /* Icon Navigation */
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 10px;
-        }
-        .social-icons a {
-            color: var(--text-muted);
-            font-size: 1.8rem;
-            transition: color 0.2s, transform 0.2s;
-            text-decoration: none;
-        }
-        .social-icons a:hover {
-            color: var(--accent-color);
-            transform: scale(1.1);
-        }
-        /* Section Layouts */
+        /* Section Structural Headings */
         section {
-            margin-bottom: 60px;
+            margin-bottom: 70px;
         }
         h2 {
-            font-size: 1.5rem;
-            border-bottom: 1px solid #1f0505;
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             letter-spacing: 2px;
             text-transform: uppercase;
+            color: var(--text-main);
         }
-        /* Music Release Cards */
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        h4 {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 10px 0 0 0;
+            text-align: center;
+        }
+        /* Unified Content Display Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         .card {
             background: var(--card-bg);
             border-radius: 6px;
-            padding: 25px;
-            text-align: center;
-            border: 1px solid #240707;
+            padding: 20px;
+            border: 1px solid var(--border-color);
             transition: all 0.2s ease-in-out;
         }
         .card:hover {
@@ -109,43 +125,22 @@
             border-color: var(--accent-color);
             box-shadow: 0 4px 20px rgba(153, 0, 0, 0.1);
         }
-        .card h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-        }
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-        /* Media Reel Grid System */
-        .media-reel {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 15px;
-        }
-        .media-item {
+        /* Native File & Media Container Elements */
+        .media-container {
             position: relative;
-            background: #111;
-            border-radius: 6px;
+            background: #000000;
+            border-radius: 4px;
             overflow: hidden;
-            border: 1px solid #222;
-            aspect-ratio: 16 / 9; /* Keeps all photo and video blocks identical in size */
+            aspect-ratio: 16 / 9;
+            width: 100%;
         }
-        .media-item img {
+        .media-container img, .media-container video {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
-        .media-item video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .media-item iframe {
+        .media-container iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -153,106 +148,161 @@
             height: 100%;
             border: 0;
         }
-        /* Core Buttons */
+        /* Direct Redirect Custom Link Buttons */
         .btn {
-            display: inline-block;
+            display: block;
+            text-align: center;
             background-color: transparent;
             color: var(--text-main);
             border: 1px solid var(--accent-color);
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 10px;
             border-radius: 4px;
             font-weight: bold;
             font-size: 0.85rem;
             letter-spacing: 1px;
             text-transform: uppercase;
+            margin-top: 15px;
             transition: all 0.2s;
         }
         .btn:hover {
             background-color: var(--accent-color);
-            border-color: var(--accent-hover);
-            box-shadow: 0 0 15px rgba(153, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(153, 0, 0, 0.4);
+        }
+        /* Social Native Icons Ribbon */
+        .social-ribbon {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 0;
+        }
+        .social-ribbon a {
+            color: var(--text-muted);
+            transition: color 0.2s, transform 0.2s;
+        }
+        .social-ribbon a:hover {
+            color: var(--accent-color);
+            transform: scale(1.1);
+        }
+        /* Clean Custom Contact Form Interface */
+        .contact-form {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 6px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: #000000;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+        .submit-btn {
+            background: var(--accent-color);
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background: var(--accent-hover);
         }
         footer {
             text-align: center;
             padding-top: 40px;
+            margin-top: 60px;
             font-size: 0.85rem;
             color: var(--text-muted);
-            border-top: 1px solid #1f0505;
+            border-top: 1px solid var(--border-color);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Main Artist Info -->
-        <header>
-            <img src="images/profile.jpg" alt="Marc Levon" class="profile-img">
-            <h1>Marc Levon</h1>
-            <div class="subtitle">Producer & Multi-Instrumentalist</div>
-            <p class="bio">Electronic music explorer creating texturized soundscapes, driving hardware rhythms, and organic grooves directly from the studio lab.</p>
-            
-            <!-- Social Media Icon Reel -->
-            <div class="social-icons">
-                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://soundcloud.com" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud"></i></a>
-                <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://bandcamp.com" target="_blank" title="Bandcamp"><i class="fab fa-bandcamp"></i></a>
+        <!-- Site Navigation Header -->
+        <nav>
+            <div class="logo">Mumkai</div>
+            <div class="nav-links">
+                <a href="#cloud-capers">Cloud Capers</a>
+                <a href="#videos">Videos</a>
+                <a href="#elephant-hunt">Elephant Hunt</a>
+                <a href="#pics">Pics</a>
+                <a href="#contact">Contact</a>
             </div>
+        </nav>
+
+        <!-- Main Title Header Block -->
+        <header>
+            <img src="images/profile.jpg" alt="Mumkai" class="profile-img">
+            <h1>Mumkai</h1>
+            <p>the works of marc mumcian</p>
         </header>
 
-        <!-- Music Links Section -->
-        <section id="music">
-            <h2>Music Shop</h2>
+        <!-- Section 1: Cloud Capers Audio Tracks -->
+        <section id="cloud-capers">
+            <h2>Cloud Capers</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Latest Album</h3>
-                    <p>Available on vinyl & digital formats.</p>
-                    <a href="https://bandcamp.com" target="_blank" class="btn">Buy on Bandcamp</a>
+                    <h3>the duke</h3>
+                    <div class="media-container" style="aspect-ratio: auto; height: auto; background: transparent;">
+                        <audio controls style="width:100%;">
+                            <source src="audio/the-duke.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
                 </div>
                 <div class="card">
-                    <h3>Recent Single</h3>
-                    <p>Stream across all digital platforms.</p>
-                    <a href="https://spotify.com" target="_blank" class="btn">Listen on Spotify</a>
+                    <h3>HUSH</h3>
+                    <div class="media-container" style="aspect-ratio: auto; height: auto; background: transparent;">
+                        <audio controls style="width:100%;">
+                            <source src="audio/hush.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Side Quest</h3>
+                    <div class="media-container" style="aspect-ratio: auto; height: auto; background: transparent;">
+                        <audio controls style="width:100%;">
+                            <source src="audio/side-quest.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Media Reel: Photos and Videos Combined -->
-        <section id="gallery">
-            <h2>Media Gallery</h2>
-            <div class="media-reel">
-                <!-- Item 1: Local Image Upload (.jpg or .png) -->
-                <div class="media-item">
-                    <img src="images/gallery1.jpg" alt="Studio Photo">
-                </div>
-
-                <!-- Item 2: Embedded YouTube Video Video -->
-                <div class="media-item">
-                    <!-- Replace the string 'VIDEO_ID' in the URL with your real YouTube video ID code -->
-                    <iframe src="https://youtube.com" allowfullscreen></iframe>
-                </div>
-
-                <!-- Item 3: Local Loop Video Upload (.mp4) -->
-                <div class="media-item">
-                    <video autoplay loop muted playsinline>
-                        <source src="video/studio-clip.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact & Booking</h2>
-            <p>For remixes, scoring work, or booking inquiries, reach out directly via email.</p>
-            <a href="mailto:your-email@example.com" class="btn">Send an Email</a>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 Marc Levon. All Rights Reserved.</p>
-        </footer>
-    </div>
-
-</body>
-</html>
+        <!-- Section 2: Video Portfolio Block (Mix of MP4 and YouTube) -->
+        <section id="videos">
+            <h2>Videos</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="media-container">
+                        <!-- Example: Local MP4 loop or clip -->
+                        <video autoplay loop muted playsinline controls>
+                            <source src="video/last-hope.mp4" type="video/mp4">
+                        </video>
+                    </div>
