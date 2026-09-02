@@ -8,7 +8,7 @@
         :root {
             --bg-color: #050505;
             --card-bg: #110303;
-            --accent-color: #990000; /* Rich Deep Dark Red Theme */
+            --accent-color: #990000; /* Deep Dark Red */
             --accent-hover: #cc0000;
             --text-main: #ffffff;
             --text-muted: #aaaaaa;
@@ -23,41 +23,29 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-        /* Top Navigation Header Bar */
+        /* Top Navigation Header Bar (No Subpages) */
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding-bottom: 30px;
+            padding-bottom: 20px;
             border-bottom: 1px solid var(--border-color);
         }
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             color: var(--text-main);
-        }
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover {
-            color: var(--accent-color);
         }
         /* Hero Banner Title Info */
         header {
             text-align: center;
-            padding: 60px 0 40px 0;
+            padding: 50px 0 30px 0;
         }
         .profile-img {
             width: 150px;
@@ -84,39 +72,35 @@
         }
         /* Section Structural Headings */
         section {
-            margin-bottom: 70px;
+            margin-bottom: 60px;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--text-main);
         }
-        h3 {
-            font-size: 1.2rem;
-            margin-top: 0;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
         h4 {
             font-size: 0.95rem;
-            color: var(--text-muted);
-            margin: 10px 0 0 0;
+            color: var(--text-main);
+            margin: 12px 0 0 0;
             text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         /* Unified Content Display Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
         }
         .card {
             background: var(--card-bg);
             border-radius: 6px;
-            padding: 20px;
+            padding: 15px;
             border: 1px solid var(--border-color);
             transition: all 0.2s ease-in-out;
         }
@@ -125,7 +109,7 @@
             border-color: var(--accent-color);
             box-shadow: 0 4px 20px rgba(153, 0, 0, 0.1);
         }
-        /* Native File & Media Container Elements */
+        /* Media Container Elements for Youtube & Soundcloud */
         .media-container {
             position: relative;
             background: #000000;
@@ -134,7 +118,7 @@
             aspect-ratio: 16 / 9;
             width: 100%;
         }
-        .media-container img, .media-container video {
+        .media-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -245,16 +229,9 @@
 <body>
 
     <div class="container">
-        <!-- Site Navigation Header -->
+        <!-- Minimal Site Navigation Header -->
         <nav>
             <div class="logo">Mumkai</div>
-            <div class="nav-links">
-                <a href="#cloud-capers">Cloud Capers</a>
-                <a href="#videos">Videos</a>
-                <a href="#elephant-hunt">Elephant Hunt</a>
-                <a href="#pics">Pics</a>
-                <a href="#contact">Contact</a>
-            </div>
         </nav>
 
         <!-- Main Title Header Block -->
@@ -264,45 +241,46 @@
             <p>the works of marc mumcian</p>
         </header>
 
-        <!-- Section 1: Cloud Capers Audio Tracks -->
+        <!-- Section 1: Cloud Capers SoundCloud Tracks -->
         <section id="cloud-capers">
             <h2>Cloud Capers</h2>
             <div class="grid">
+                <!-- Track 1: the duke -->
                 <div class="card">
-                    <h3>the duke</h3>
-                    <div class="media-container" style="aspect-ratio: auto; height: auto; background: transparent;">
-                        <audio controls style="width:100%;">
-                            <source src="audio/the-duke.mp3" type="audio/mpeg">
-                        </audio>
+                    <!-- Replace the SoundCloud track ID or embed URL below with your track link -->
+                    <div class="media-container" style="aspect-ratio: 16 / 9;">
+                        <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://soundcloud.com"></iframe>
                     </div>
+                    <h4>the duke</h4>
                 </div>
+                <!-- Track 2: HUSH -->
                 <div class="card">
-                    <h3>HUSH</h3>
-                    <div class="media-container" style="aspect-ratio: auto; height: auto; background: transparent;">
-                        <audio controls style="width:100%;">
-                            <source src="audio/hush.mp3" type="audio/mpeg">
-                        </audio>
+                    <div class="media-container" style="aspect-ratio: 16 / 9;">
+                        <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://soundcloud.com"></iframe>
                     </div>
+                    <h4>HUSH</h4>
                 </div>
+                <!-- Track 3: Side Quest -->
                 <div class="card">
-                    <h3>Side Quest</h3>
-                    <div class="media-container" style="aspect-ratio: auto; height: auto; background: transparent;">
-                        <audio controls style="width:100%;">
-                            <source src="audio/side-quest.mp3" type="audio/mpeg">
-                        </audio>
+                    <div class="media-container" style="aspect-ratio: 16 / 9;">
+                        <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://soundcloud.com"></iframe>
                     </div>
+                    <h4>Side Quest</h4>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: Video Portfolio Block (Mix of MP4 and YouTube) -->
+        <!-- Section 2: Video Portfolio Block (All YouTube Embeds) -->
         <section id="videos">
             <h2>Videos</h2>
             <div class="grid">
+                <!-- Video 1: Last Hope -->
                 <div class="card">
                     <div class="media-container">
-                        <!-- Example: Local MP4 loop or clip -->
-                        <video autoplay loop muted playsinline controls>
-                            <source src="video/last-hope.mp4" type="video/mp4">
-                        </video>
+                        <!-- Replace VIDEO_ID with your YouTube alphanumeric code -->
+                        <iframe src="https://youtube.com" allowfullscreen></iframe>
                     </div>
+                    <h4>Last Hope</h4>
+                </div>
+                <!-- Video 2: EP 1 - Primo -->
+                <div class="card">
