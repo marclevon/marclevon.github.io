@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Profile</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff4757;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+            letter-spacing: 1px;
+        }
+        .bio {
+            font-size: 1.1rem;
+            color: #a4b0be;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .music-player {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid #2f3542;
+        }
+        .music-player h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        audio {
+            width: 100%;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            background-color: #ff4757;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background-color: #ff6b81;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Artist Photo -->
+        <img src="images/profile.jpg" alt="Artist Photo" class="profile-img">
+
+        
+        <h1>Artist Name</h1>
+        <p class="bio">Producer and multi-instrumentalist crafting electronic beats and organic sounds from the studio.</p>
+
+        <!-- Featured Track -->
+        <div class="music-player">
+            <h3>Listen to the Latest Track</h3>
+            <audio controls>
+                <source src="audio/latest-track.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- Social & Streaming Links -->
+        <div class="links">
+            <a href="https://spotify.com" target="_blank" class="btn">Listen on Spotify</a>
+            <a href="https://soundcloud.com" target="_blank" class="btn">SoundCloud</a>
+            <a href="https://instagram.com" target="_blank" class="btn">Instagram</a>
+        </div>
+    </div>
+
+</body>
+</html>
