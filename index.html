@@ -279,31 +279,38 @@
             </div>
         </section>
 
-             <!-- Section 4: Picture Media Gallery (Auto-Sizing Full Images) -->
+           <!-- Section 4: Picture Media Gallery (Horizontal Scrolling Feed) -->
         <section id="pics">
             <h2>Pics</h2>
-            <div class="grid">
-                <!-- Image 1 -->
-                <div class="card">
-                    <div class="media-container" style="aspect-ratio: auto; height: auto;">
-                        <img src="images/reel-photo1.jpg" alt="Gallery Image 1" style="width: 100%; height: auto; object-fit: contain; display: block;">
+            
+            <!-- Hidden horizontal scroll container configuration -->
+            <div class="scroll-wrapper" style="width: 100%; overflow-x: auto; white-space: nowrap; padding-bottom: 15px; -webkit-overflow-scrolling: touch;">
+                <div class="scroll-content" style="display: inline-flex; gap: 20px;">
+                    
+                    <!-- Image 1 -->
+                    <div class="card" style="width: 280px; flex-shrink: 0; display: inline-block; vertical-align: top; white-space: normal;">
+                        <div class="media-container" style="aspect-ratio: auto; height: auto;">
+                            <img src="images/reel-photo1.jpg" alt="Gallery Image 1" style="width: 100%; height: auto; object-fit: contain; display: block; border-radius: 4px;">
+                        </div>
                     </div>
-                </div>
-                <!-- Image 2 -->
-                <div class="card">
-                    <div class="media-container" style="aspect-ratio: auto; height: auto;">
-                        <img src="images/reel-photo2.jpg" alt="Gallery Image 2" style="width: 100%; height: auto; object-fit: contain; display: block;">
+
+                    <!-- Image 2 -->
+                    <div class="card" style="width: 280px; flex-shrink: 0; display: inline-block; vertical-align: top; white-space: normal;">
+                        <div class="media-container" style="aspect-ratio: auto; height: auto;">
+                            <img src="images/reel-photo2.jpg" alt="Gallery Image 2" style="width: 100%; height: auto; object-fit: contain; display: block; border-radius: 4px;">
+                        </div>
                     </div>
-                </div>
-                <!-- Image 3 -->
-                <div class="card">
-                    <div class="media-container" style="aspect-ratio: auto; height: auto;">
-                        <img src="images/reel-photo3.jpg" alt="Gallery Image 3" style="width: 100%; height: auto; object-fit: contain; display: block;">
+
+                    <!-- Image 3 -->
+                    <div class="card" style="width: 280px; flex-shrink: 0; display: inline-block; vertical-align: top; white-space: normal;">
+                        <div class="media-container" style="aspect-ratio: auto; height: auto;">
+                            <img src="images/reel-photo3.jpg" alt="Gallery Image 3" style="width: 100%; height: auto; object-fit: contain; display: block; border-radius: 4px;">
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
-
 
         <!-- Section 5: Contact Connection System -->
         <section id="contact">
