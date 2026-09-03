@@ -279,38 +279,45 @@
             </div>
         </section>
 
-           <!-- Section 4: Picture Media Gallery (Horizontal Scrolling Feed) -->
+   <!-- Section 4: Picture Media Gallery (Horizontal Scrolling & Click to View Full) -->
         <section id="pics">
             <h2>Pics</h2>
             
-            <!-- Hidden horizontal scroll container configuration -->
             <div class="scroll-wrapper" style="width: 100%; overflow-x: auto; white-space: nowrap; padding-bottom: 15px; -webkit-overflow-scrolling: touch;">
                 <div class="scroll-content" style="display: inline-flex; gap: 20px;">
                     
                     <!-- Image 1 -->
                     <div class="card" style="width: 280px; flex-shrink: 0; display: inline-block; vertical-align: top; white-space: normal;">
                         <div class="media-container" style="aspect-ratio: auto; height: auto;">
-                            <img src="images/reel-photo1.jpg" alt="Gallery Image 1" style="width: 100%; height: auto; object-fit: contain; display: block; border-radius: 4px;">
+                            <!-- target="_blank" forces the image to open in a brand-new tab -->
+                            <a href="images/reel-photo1.jpg" target="_blank" style="display: block; cursor: pointer;">
+                                <img src="images/reel-photo1.jpg" alt="Gallery Image 1" style="width: 100%; height: auto; object-fit: contain; display: block; border-radius: 4px;">
+                            </a>
                         </div>
                     </div>
 
                     <!-- Image 2 -->
                     <div class="card" style="width: 280px; flex-shrink: 0; display: inline-block; vertical-align: top; white-space: normal;">
                         <div class="media-container" style="aspect-ratio: auto; height: auto;">
-                            <img src="images/reel-photo2.jpg" alt="Gallery Image 2" style="width: 100%; height: auto; object-fit: contain; display: block; border-radius: 4px;">
+                            <a href="images/reel-photo2.jpg" target="_blank" style="display: block; cursor: pointer;">
+                                <img src="images/reel-photo2.jpg" alt="Gallery Image 2" style="width: 100%; height: auto; object-fit: contain; display: block; border-radius: 4px;">
+                            </a>
                         </div>
                     </div>
 
                     <!-- Image 3 -->
                     <div class="card" style="width: 280px; flex-shrink: 0; display: inline-block; vertical-align: top; white-space: normal;">
                         <div class="media-container" style="aspect-ratio: auto; height: auto;">
-                            <img src="images/reel-photo3.jpg" alt="Gallery Image 3" style="width: 100%; height: auto; object-fit: contain; display: block; border-radius: 4px;">
+                            <a href="images/reel-photo3.jpg" target="_blank" style="display: block; cursor: pointer;">
+                                <img src="images/reel-photo3.jpg" alt="Gallery Image 3" style="width: 100%; height: auto; object-fit: contain; display: block; border-radius: 4px;">
+                            </a>
                         </div>
                     </div>
 
                 </div>
             </div>
         </section>
+
 
         <!-- Section 5: Contact Connection System -->
         <section id="contact">
@@ -344,7 +351,7 @@
                 <a href="https://soundcloud.com/mumkai" target="_blank" title="SoundCloud">
                     <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M1.714 12.857c-.114 0-.229.023-.343.046C.617 13.04 0 13.726 0 14.571v1.715c0 .845.617 1.531 1.371 1.668.114.023.229.046.343.046H2.57v-5.143H1.714zm1.715-1.165V18h.857v-6.308h-.857zm1.714-1.303V18h.857V10.39h-.857zm1.714.457V18h.857V10.846h-.857zm1.714-2.331V18h.857V8.514h-.857zm1.714 2.103V18h.858V10.617h-.858zm1.715-2.903V18h.857V7.714h-.857zm1.714.503V18h.857V8.217h-.857zm1.714-1.28V18h.857V6.937h-.857zm1.714.8V18h.858V7.737h-.858zm1.715-2.011V18h.857V5.726h-.857zm1.714 1.508V18H24V11.23c-.023-1.92-1.577-3.475-3.52-3.475-.754 0-1.463.252-2.057.686-.343-2.126-2.148-3.726-4.343-3.726-.845 0-1.645.252-2.331.686v12.6z"/></svg>
                 </a>
-                <a href="https://youtube.com/mumkai" target="_blank" title="YouTube">
+                <a href="https://youtube.com/@mumkaiii" target="_blank" title="YouTube">
                     <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </a>
             </div>
