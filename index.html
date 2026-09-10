@@ -13,14 +13,22 @@
             --text-muted: #aaaaaa;
             --border-color: #333333;
         }
-        body {
+                body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
             padding: 0;
             line-height: 1.6;
+
+            /* Fixed Background Logo Settings */
+            background-image: linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.85)), url('images/bg-logo.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: 50%;
         }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
