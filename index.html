@@ -352,6 +352,29 @@
 </a>
 </div>
 
+        /* Creates a responsive grid layout */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px 0;
+}
+
+/* Forces thumbnails to fit nicely inside their grid squares */
+.image-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Adds a slight hover pop effect to show it is clickable */
+.image-grid img:hover {
+  transform: scale(1.03);
+}
+
 
 
 
