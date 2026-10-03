@@ -312,68 +312,45 @@
             </div>
         </section>
 
-  <!-- Section 4: Images Grid Section -->
+ <!-- Section 4: Images Grid Section -->
+<style>
+  /* This tag tells the browser that this is styling code, not text */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  .image-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .image-grid img:hover {
+    transform: scale(1.03);
+  }
+</style>
+
 <div class="image-grid">
-  <a href="reel-photo1.jpg" target="_blank">
-    <img src="reel-photo1.jpg" alt="Gallery Image 1">
-  </a>
-  <a href="reel-photo2.jpg" target="_blank">
-    <img src="reel-photo2.jpg" alt="Gallery Image 2">
-  </a>
-  <a href="reel-photo3.jpg" target="_blank">
-    <img src="reel-photo3.jpg" alt="Gallery Image 3">
-  </a>
-  <a href="silvestri.jpg" target="_blank">
-    <img src="ilvestri.jpg" alt="Gallery Image 4">
-  </a>
-  <a href="elfman.jpg" target="_blank">
-    <img src="elfman.jpg" alt="Gallery Image 1">
-  </a>
-  <a href="ded1.jpg" target="_blank">
-    <img src="ded1.jpg" alt="Gallery Image 2">
-  </a>
-  <a href="ded2.jpg" target="_blank">
-    <img src="ded2.jpg" alt="Gallery Image 3">
-  </a>
-  <a href="studio1.jpg" target="_blank">
-    <img src="studio1.jpg" alt="Gallery Image 4">
-  </a>
-  <a href="marcded.jpg" target="_blank">
-    <img src="marcded.jpg" alt="Gallery Image 1">
-  </a>
-  <a href="gspo1.jpg" target="_blank">
-    <img src="gspo1.jpg" alt="Gallery Image 2">
-  </a>
-  <a href="quintet.jpg" target="_blank">
-    <img src="quintet.jpg" alt="Gallery Image 3">
-  </a>
-  <a href="gallery-image4-large.jpg" target="_blank">
-    <img src="gallery-image4-thumb.jpg" alt="Gallery Image 4">
-</a>
+  <a href="reel-photo1.jpg" target="_blank"><img src="reel-photo1.jpg" alt="Gallery Image 1"></a>
+  <a href="reel-photo2.jpg" target="_blank"><img src="reel-photo2.jpg" alt="Gallery Image 2"></a>
+  <a href="reel-photo3.jpg" target="_blank"><img src="reel-photo3.jpg" alt="Gallery Image 3"></a>
+  <a href="silvestri.jpg" target="_blank"><img src="silvestri.jpg" alt="Gallery Image 4"></a> <!-- Fixed "s" typo here -->
+  <a href="elfman.jpg" target="_blank"><img src="elfman.jpg" alt="Gallery Image 5"></a>
+  <a href="ded1.jpg" target="_blank"><img src="ded1.jpg" alt="Gallery Image 6"></a>
+  <a href="ded2.jpg" target="_blank"><img src="ded2.jpg" alt="Gallery Image 7"></a>
+  <a href="studio1.jpg" target="_blank"><img src="studio1.jpg" alt="Gallery Image 8"></a>
+  <a href="marcded.jpg" target="_blank"><img src="marcded.jpg" alt="Gallery Image 9"></a>
+  <a href="gspo1.jpg" target="_blank"><img src="gspo1.jpg" alt="Gallery Image 10"></a>
+  <a href="quintet.jpg" target="_blank"><img src="quintet.jpg" alt="Gallery Image 11"></a>
+  <a href="gallery-image4-large.jpg" target="_blank"><img src="gallery-image4-thumb.jpg" alt="Gallery Image 12"></a>
 </div>
 
-        /* Creates a responsive grid layout */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 20px 0;
-}
-
-/* Forces thumbnails to fit nicely inside their grid squares */
-.image-grid img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-
-/* Adds a slight hover pop effect to show it is clickable */
-.image-grid img:hover {
-  transform: scale(1.03);
-}
 
 
 
