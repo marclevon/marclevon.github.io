@@ -312,43 +312,65 @@
             </div>
         </section>
 
- <!-- Section 4: Images Grid Section -->
+<!-- Section 4: Images Grid Section -->
 <style>
-  /* This tag tells the browser that this is styling code, not text */
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Container that forces items into a single, clean scrolling row */
+  .scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     gap: 15px;
-    padding: 20px 0;
+    padding: 20px 10px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile devices */
+    scroll-snap-type: x mandatory;
   }
 
-  .image-grid img {
-    width: 100%;
+  /* Custom scrollbar to keep it looking subtle and clean */
+  .scrolling-wrapper::-webkit-scrollbar {
+    height: 6px;
+  }
+  .scrolling-wrapper::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 10px;
+  }
+
+  /* Individual item structures */
+  .scroll-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .scroll-item img {
+    width: 280px;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.2s ease;
     cursor: pointer;
+    display: block;
   }
 
-  .image-grid img:hover {
+  .scroll-item img:hover {
     transform: scale(1.03);
   }
 </style>
 
-<div class="image-grid">
-  <a href="reel-photo1.jpg" target="_blank"><img src="reel-photo1.jpg" alt="Gallery Image 1"></a>
-  <a href="reel-photo2.jpg" target="_blank"><img src="reel-photo2.jpg" alt="Gallery Image 2"></a>
-  <a href="reel-photo3.jpg" target="_blank"><img src="reel-photo3.jpg" alt="Gallery Image 3"></a>
-  <a href="silvestri.jpg" target="_blank"><img src="silvestri.jpg" alt="Gallery Image 4"></a> <!-- Fixed "s" typo here -->
-  <a href="elfman.jpg" target="_blank"><img src="elfman.jpg" alt="Gallery Image 5"></a>
-  <a href="ded1.jpg" target="_blank"><img src="ded1.jpg" alt="Gallery Image 6"></a>
-  <a href="ded2.jpg" target="_blank"><img src="ded2.jpg" alt="Gallery Image 7"></a>
-  <a href="studio1.jpg" target="_blank"><img src="studio1.jpg" alt="Gallery Image 8"></a>
-  <a href="marcded.jpg" target="_blank"><img src="marcded.jpg" alt="Gallery Image 9"></a>
-  <a href="gspo1.jpg" target="_blank"><img src="gspo1.jpg" alt="Gallery Image 10"></a>
-  <a href="quintet.jpg" target="_blank"><img src="quintet.jpg" alt="Gallery Image 11"></a>
-  <a href="gallery-image4-large.jpg" target="_blank"><img src="gallery-image4-thumb.jpg" alt="Gallery Image 12"></a>
+<div class="scrolling-wrapper">
+  <!-- If these files exist in your main directory, they will open. If they throw a 404, check your GitHub file list -->
+  <div class="scroll-item"><a href="reel-photo1.jpg" target="_blank"><img src="reel-photo1.jpg" alt="Gallery Image 1"></a></div>
+  <div class="scroll-item"><a href="reel-photo2.jpg" target="_blank"><img src="reel-photo2.jpg" alt="Gallery Image 2"></a></div>
+  <div class="scroll-item"><a href="reel-photo3.jpg" target="_blank"><img src="reel-photo3.jpg" alt="Gallery Image 3"></a></div>
+  <div class="scroll-item"><a href="silvestri.jpg" target="_blank"><img src="silvestri.jpg" alt="Gallery Image 4"></a></div> 
+  <div class="scroll-item"><a href="elfman.jpg" target="_blank"><img src="elfman.jpg" alt="Gallery Image 5"></a></div>
+  <div class="scroll-item"><a href="ded1.jpg" target="_blank"><img src="ded1.jpg" alt="Gallery Image 6"></a></div>
+  <div class="scroll-item"><a href="ded2.jpg" target="_blank"><img src="ded2.jpg" alt="Gallery Image 7"></a></div>
+  <div class="scroll-item"><a href="studio1.jpg" target="_blank"><img src="studio1.jpg" alt="Gallery Image 8"></a></div>
+  <div class="scroll-item"><a href="marcded.jpg" target="_blank"><img src="marcded.jpg" alt="Gallery Image 9"></a></div>
+  <div class="scroll-item"><a href="gspo1.jpg" target="_blank"><img src="gspo1.jpg" alt="Gallery Image 10"></a></div>
+  <div class="scroll-item"><a href="quintet.jpg" target="_blank"><img src="quintet.jpg" alt="Gallery Image 11"></a></div>
+  
+  <!-- Fallback/Default live image assets -->
+  <div class="scroll-item"><a href="gallery-image4-large.jpg" target="_blank"><img src="gallery-image4-thumb.jpg" alt="Gallery Image 12"></a></div>
 </div>
 
 
