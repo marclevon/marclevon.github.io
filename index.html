@@ -314,62 +314,57 @@
 
 <!-- Section 4: Images Grid Section -->
 <style>
-  /* Container that forces items into a single, clean scrolling row */
-  .scrolling-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 20px 10px;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile devices */
-    scroll-snap-type: x mandatory;
+  /* Creates a compact, clean square grid of all your photos */
+  .image-grid-container {
+    display: grid;
+    /* This automatically arranges photos into rows depending on screen width */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    padding: 20px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  /* Custom scrollbar to keep it looking subtle and clean */
-  .scrolling-wrapper::-webkit-scrollbar {
-    height: 6px;
-  }
-  .scrolling-wrapper::-webkit-scrollbar-thumb {
-    background-color: #444;
-    border-radius: 10px;
-  }
-
-  /* Individual item structures */
-  .scroll-item {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
+  /* Keeps the photo frames perfectly uniform and cropped as squares */
+  .grid-photo-item {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forces squares */
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid #222;
   }
 
-  .scroll-item img {
-    width: 280px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
+  .grid-photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Centers and crops the photo cleanly inside the square */
+    transition: transform 0.2s ease, filter 0.2s ease;
     cursor: pointer;
     display: block;
   }
 
-  .scroll-item img:hover {
-    transform: scale(1.03);
+  /* Gives a nice hover effect when people mouse over a picture */
+  .grid-photo-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
   }
 </style>
 
-<div class="scrolling-wrapper">
-  <!-- Added images/ to paths so GitHub Pages can find your files -->
-  <div class="scroll-item"><a href="images/reel-photo1.jpg" target="_blank"><img src="images/reel-photo1.jpg" alt="Gallery Image 1"></a></div>
-  <div class="scroll-item"><a href="images/reel-photo2.jpg" target="_blank"><img src="images/reel-photo2.jpg" alt="Gallery Image 2"></a></div>
-  <div class="scroll-item"><a href="images/reel-photo3.jpg" target="_blank"><img src="images/reel-photo3.jpg" alt="Gallery Image 3"></a></div>
-  <div class="scroll-item"><a href="images/silvestri.jpg" target="_blank"><img src="images/silvestri.jpg" alt="Gallery Image 4"></a></div> 
-  <div class="scroll-item"><a href="images/elfman.jpg" target="_blank"><img src="images/elfman.jpg" alt="Gallery Image 5"></a></div>
-  <div class="scroll-item"><a href="images/ded1.jpg" target="_blank"><img src="images/ded1.jpg" alt="Gallery Image 6"></a></div>
-  <div class="scroll-item"><a href="images/ded2.jpg" target="_blank"><img src="images/ded2.jpg" alt="Gallery Image 7"></a></div>
-  <div class="scroll-item"><a href="images/studio1.jpg" target="_blank"><img src="images/studio1.jpg" alt="Gallery Image 8"></a></div>
-  <div class="scroll-item"><a href="images/marcded.jpg" target="_blank"><img src="images/marcded.jpg" alt="Gallery Image 9"></a></div>
-  <div class="scroll-item"><a href="images/gspo1.jpg" target="_blank"><img src="images/gspo1.jpg" alt="Gallery Image 10"></a></div>
-  <div class="scroll-item"><a href="images/quintet.jpg" target="_blank"><img src="images/quintet.jpg" alt="Gallery Image 11"></a></div>
+<div class="image-grid-container">
+  <!-- All 11 images structured to look in your "images" folder -->
+  <a class="grid-photo-item" href="images/reel-photo1.jpg" target="_blank"><img src="images/reel-photo1.jpg" alt="Gallery Image 1"></a>
+  <a class="grid-photo-item" href="images/reel-photo2.jpg" target="_blank"><img src="images/reel-photo2.jpg" alt="Gallery Image 2"></a>
+  <a class="grid-photo-item" href="images/reel-photo3.jpg" target="_blank"><img src="images/reel-photo3.jpg" alt="Gallery Image 3"></a>
+  <a class="grid-photo-item" href="images/silvestri.jpg" target="_blank"><img src="images/silvestri.jpg" alt="Gallery Image 4"></a>
+  <a class="grid-photo-item" href="images/elfman.jpg" target="_blank"><img src="images/elfman.jpg" alt="Gallery Image 5"></a>
+  <a class="grid-photo-item" href="images/ded1.jpg" target="_blank"><img src="images/ded1.jpg" alt="Gallery Image 6"></a>
+  <a class="grid-photo-item" href="images/ded2.jpg" target="_blank"><img src="images/ded2.jpg" alt="Gallery Image 7"></a>
+  <a class="grid-photo-item" href="images/studio1.jpg" target="_blank"><img src="images/studio1.jpg" alt="Gallery Image 8"></a>
+  <a class="grid-photo-item" href="images/marcded.jpg" target="_blank"><img src="images/marcded.jpg" alt="Gallery Image 9"></a>
+  <a class="grid-photo-item" href="images/gspo1.jpg" target="_blank"><img src="images/gspo1.jpg" alt="Gallery Image 10"></a>
+  <a class="grid-photo-item" href="images/quintet.jpg" target="_blank"><img src="images/quintet.jpg" alt="Gallery Image 11"></a>
 </div>
-
 
 
 
